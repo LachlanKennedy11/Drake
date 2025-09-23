@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Drake Fan Hub</title>
+    <meta name="description" content="The ultimate fan hub for Drake. Explore his music, tour dates, biography, and gallery.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Favicon (OVO Owl inspired) -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🦉</text></svg>">
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #121212;
+            color: #E0E0E0;
+        }
+        .gold-text {
+            color: #D4AF37;
+        }
+        .hero-bg {
+            background-image: linear-gradient(to top, rgba(18,18,18,1) 0%, rgba(18,18,18,0.6) 50%, rgba(18,18,18,1) 100%), url('https://placehold.co/1920x1080/000000/FFFFFF?text=Drake+Live');
+            background-size: cover;
+            background-position: center 30%;
+        }
+        .section-title {
+            font-weight: 900;
+            font-size: 2.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+        .album-card {
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+        .album-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.2);
+        }
+        .btn-primary {
+            @apply inline-block bg-transparent border-2 border-yellow-500 text-yellow-500 font-bold py-3 px-8 rounded-lg uppercase tracking-wider transition-all duration-300 ease-in-out;
+        }
+        .btn-primary:hover {
+             @apply bg-yellow-500 text-black;
+        }
+        .btn-secondary {
+            @apply inline-block bg-neutral-700 hover:bg-neutral-600 text-white font-semibold py-2 px-5 rounded-lg transition-colors;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header & Navigation -->
+    <header class="bg-black/80 backdrop-blur-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-black uppercase tracking-widest gold-text">
+                DRIZZY
+            </a>
+            <div class="hidden md:flex space-x-8 items-center">
+                <a href="#music" class="text-white hover:gold-text transition-colors">Music</a>
+                <a href="#about" class="text-white hover:gold-text transition-colors">About</a>
+                <a href="#tour" class="text-white hover:gold-text transition-colors">Tour</a>
+                <a href="#gallery" class="text-white hover:gold-text transition-colors">Gallery</a>
+            </div>
+             <!-- Mobile Menu Button -->
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-white focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
+            <a href="#music" class="block py-2 text-white hover:gold-text transition-colors">Music</a>
+            <a href="#about" class="block py-2 text-white hover:gold-text transition-colors">About</a>
+            <a href="#tour" class="block py-2 text-white hover:gold-text transition-colors">Tour</a>
+            <a href="#gallery" class="block py-2 text-white hover:gold-text transition-colors">Gallery</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-bg h-[80vh] flex items-center justify-center text-center">
+            <div class="max-w-3xl px-4">
+                <h1 class="text-5xl md:text-7xl font-black text-white uppercase tracking-wider leading-tight">
+                    Defining a<br><span class="gold-text">Decade of Music</span>
+                </h1>
+                <p class="mt-4 text-lg md:text-xl text-neutral-300 max-w-xl mx-auto">
+                    Explore the discography, legacy, and world of the 6 God.
+                </p>
+                <a href="#music" class="mt-8 btn-primary">
+                    Explore Discography
+                </a>
+            </div>
+        </section>
+
+        <!-- Latest Release Section -->
+        <section id="music" class="py-20 bg-[#181818]">
+            <div class="container mx-auto px-6">
+                <h2 class="section-title text-center mb-12">Latest Release</h2>
+                <div class="flex flex-col md:flex-row items-center gap-8 md:gap-12 bg-black/30 p-8 rounded-lg">
+                    <img src="https://placehold.co/400x400/000000/FFFFFF?text=Album+Art" alt="Latest Album Art" class="w-full md:w-1/3 max-w-sm rounded-lg shadow-lg">
+                    <div class="flex-1 text-center md:text-left">
+                        <h3 class="text-4xl font-bold">For All The Dogs</h3>
+                        <p class="text-lg gold-text mb-4">2023 Studio Album</p>
+                        <p class="text-neutral-400 mb-6">
+                            Drake's latest project continues to push boundaries, blending introspective lyrics with chart-topping production. Featuring collaborations with top artists, it's a testament to his enduring relevance in the music industry.
+                        </p>
+                        <div class="flex justify-center md:justify-start items-center space-x-4">
+                            <span class="font-semibold">Listen Now:</span>
+                            <a href="#" aria-label="Listen on Spotify" class="text-green-500 hover:text-green-400 transition-colors">
+                                <svg class="w-8 h-8" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm4.194 14.553a.625.625 0 01-.882.096c-1.488-.916-3.36-1.122-5.592-.61a.626.626 0 01-.703-.554.624.624 0 01.553-.703c2.493-.564 4.604-.324 6.324.733a.625.625 0 01.297.882zm.892-2.132a.75.75 0 01-1.058.11c-1.725-1.054-4.32-1.353-6.438-.74a.75.75 0 01-.84-.665.75.75 0 01.664-.84c2.404-.707 5.28-.358 7.284.89a.75.75 0 01.38 1.055zm.106-2.294c-2.06-1.23-5.438-1.34-7.468-.74a.875.875 0 11-.42-1.688c2.31-.67 6.046-.53 8.412.92a.875.875 0 11-.524 1.508z"></path></svg>
+                            </a>
+                            <a href="#" aria-label="Listen on Apple Music" class="text-red-500 hover:text-red-400 transition-colors">
+                                <svg class="w-8 h-8" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M12.003 2C9.13 2 6.885 3.535 5.603 5.752c-2.342 4.103.54 9.172 2.982 12.316a5.155 5.155 0 001.65.99c.96.483 2.016.483 2.977 0a5.2 5.2 0 001.648-.992c2.443-3.143 5.322-8.212 2.98-12.314C17.118 3.535 14.873 2 12.003 2zm.002 5.48c.112-2.046 2.41-2.91 4.168-1.572-1.42 1.056-2.477 2.62-2.913 4.25-1.11-2.433-1.693-4.832-1.255-2.678zm-3.603 11.232c.638.99 1.42 2.22 2.614 2.22s1.762-1.057 2.67-2.22c-.85.54-1.83.93-2.67.93-.842 0-1.764-.39-2.614-.93z"></path></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Discography Highlights -->
+        <section class="py-20">
+             <div class="container mx-auto px-6">
+                <h2 class="section-title text-center mb-12">Essential Albums</h2>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
+                    <!-- Album 1 -->
+                    <div class="album-card bg-neutral-800 rounded-lg overflow-hidden">
+                        <img src="https://placehold.co/300x300/111111/FFFFFF?text=Take+Care" alt="Album cover for Take Care" class="w-full h-auto">
+                        <div class="p-4">
+                            <h3 class="font-bold text-lg">Take Care</h3>
+                            <p class="text-sm text-neutral-400">2011</p>
+                        </div>
+                    </div>
+                    <!-- Album 2 -->
+                    <div class="album-card bg-neutral-800 rounded-lg overflow-hidden">
+                        <img src="https://placehold.co/300x300/111111/FFFFFF?text=NWTS" alt="Album cover for Nothing Was The Same" class="w-full h-auto">
+                        <div class="p-4">
+                            <h3 class="font-bold text-lg">Nothing Was The Same</h3>
+                            <p class="text-sm text-neutral-400">2013</p>
+                        </div>
+                    </div>
+                    <!-- Album 3 -->
+                    <div class="album-card bg-neutral-800 rounded-lg overflow-hidden">
+                        <img src="https://placehold.co/300x300/111111/FFFFFF?text=Scorpion" alt="Album cover for Scorpion" class="w-full h-auto">
+                        <div class="p-4">
+                            <h3 class="font-bold text-lg">Scorpion</h3>
+                            <p class="text-sm text-neutral-400">2018</p>
+                        </div>
+                    </div>
+                    <!-- Album 4 -->
+                    <div class="album-card bg-neutral-800 rounded-lg overflow-hidden">
+                        <img src="https://placehold.co/300x300/111111/FFFFFF?text=CLB" alt="Album cover for Certified Lover Boy" class="w-full h-auto">
+                        <div class="p-4">
+                            <h3 class="font-bold text-lg">Certified Lover Boy</h3>
+                            <p class="text-sm text-neutral-400">2021</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-20 bg-[#181818]">
+            <div class="container mx-auto px-6 flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2">
+                    <h2 class="section-title mb-6">The 6 God</h2>
+                    <p class="text-neutral-300 mb-4 leading-relaxed">
+                        Aubrey "Drake" Graham is a Canadian rapper, singer, songwriter, and actor who has become one of the most dominant forces in popular music. Since his breakout mixtape "So Far Gone" in 2009, he has shattered countless records, earning multiple Grammy Awards and consistently topping the Billboard charts.
+                    </p>
+                    <p class="text-neutral-300 leading-relaxed">
+                        Known for his emotional vulnerability, versatile flows, and knack for creating global hits, Drake has redefined the sound of modern hip-hop and pop. His influence extends beyond music into fashion and business with his OVO (October's Very Own) brand.
+                    </p>
+                </div>
+                <div class="md:w-1/2">
+                    <img src="https://placehold.co/600x700/000000/FFFFFF?text=Drake" alt="A photo of Drake" class="rounded-lg shadow-2xl w-full">
+                </div>
+            </div>
+        </section>
+        
+        <!-- Tour Dates Section -->
+        <section id="tour" class="py-20">
+            <div class="container mx-auto px-6">
+                <h2 class="section-title text-center mb-12">On Tour</h2>
+                <div class="max-w-4xl mx-auto">
+                    <p class="text-center text-neutral-400 mb-8">No current tour dates announced. Check back soon for updates!</p>
+                    <!-- This is an example of what the tour dates would look like when available -->
+                    <div class="space-y-4 hidden">
+                         <div class="flex flex-col md:flex-row items-center justify-between p-4 bg-neutral-800 rounded-lg">
+                            <div class="text-center md:text-left mb-4 md:mb-0">
+                                <p class="text-xl font-bold">OCT 28, 2025</p>
+                                <p class="text-neutral-400">New York, NY — Madison Square Garden</p>
+                            </div>
+                            <a href="#" class="btn-secondary">Buy Tickets</a>
+                        </div>
+                         <div class="flex flex-col md:flex-row items-center justify-between p-4 bg-neutral-800 rounded-lg">
+                            <div class="text-center md:text-left mb-4 md:mb-0">
+                                <p class="text-xl font-bold">NOV 02, 2025</p>
+                                <p class="text-neutral-400">Los Angeles, CA — Crypto.com Arena</p>
+                            </div>
+                            <a href="#" class="btn-secondary">Sold Out</a>
+                        </div>
+                         <div class="flex flex-col md:flex-row items-center justify-between p-4 bg-neutral-800 rounded-lg">
+                            <div class="text-center md:text-left mb-4 md:mb-0">
+                                <p class="text-xl font-bold">NOV 07, 2025</p>
+                                <p class="text-neutral-400">Toronto, ON — Scotiabank Arena</p>
+                            </div>
+                            <a href="#" class="btn-secondary">Buy Tickets</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section id="gallery" class="py-20 bg-[#181818]">
+            <div class="container mx-auto px-6">
+                <h2 class="section-title text-center mb-12">Gallery</h2>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <div class="overflow-hidden rounded-lg aspect-w-1 aspect-h-1"><img src="https://placehold.co/500x500/000/FFF?text=Live+1" alt="Drake performing live" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110"></div>
+                    <div class="overflow-hidden rounded-lg aspect-w-1 aspect-h-1"><img src="https://placehold.co/500x500/111/FFF?text=Fashion+1" alt="Drake fashion shot" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110"></div>
+                    <div class="overflow-hidden rounded-lg aspect-w-1 aspect-h-1"><img src="https://placehold.co/500x500/222/FFF?text=Live+2" alt="Drake on stage" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110"></div>
+                    <div class="overflow-hidden rounded-lg aspect-w-1 aspect-h-1"><img src="https://placehold.co/500x500/333/FFF?text=Candid" alt="Candid photo of Drake" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110"></div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    
+    <!-- Footer -->
+    <footer class="bg-black py-12">
+        <div class="container mx-auto px-6 text-center text-neutral-400">
+            <div class="flex justify-center space-x-6 mb-6">
+                <a href="#" aria-label="Instagram" class="hover:text-white transition-colors"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.85s-.011 3.584-.069 4.85c-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07s-3.584-.012-4.85-.07c-3.252-.148-4.771-1.691-4.919-4.919-.058-1.265-.069-1.645-.069-4.85s.011-3.584.069-4.85c.149-3.225 1.664-4.771 4.919-4.919C8.416 2.175 8.796 2.163 12 2.163zm0 1.802c-3.552 0-3.926.015-5.286.077-2.827.128-4.142 1.437-4.27 4.27-.062 1.36-.077 1.733-.077 5.286s.015 3.926.077 5.286c.128 2.827 1.443 4.142 4.27 4.27 1.36.062 1.733.077 5.286.077s3.926-.015 5.286-.077c2.827-.128 4.142-1.443 4.27-4.27.062-1.36.077-1.733.077-5.286s-.015-3.926-.077-5.286c-.128-2.827-1.443-4.142-4.27-4.27-1.36-.062-1.733-.077-5.286-.077zM12 7.838a4.162 4.162 0 100 8.324 4.162 4.162 0 000-8.324zm0 6.525a2.362 2.362 0 110-4.725 2.362 2.362 0 010 4.725zM16.95 6.402a1.25 1.25 0 100 2.5 1.25 1.25 0 000-2.5z"></path></svg></a>
+                <a href="#" aria-label="X (formerly Twitter)" class="hover:text-white transition-colors"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg></a>
+                <a href="#" aria-label="Youtube" class="hover:text-white transition-colors"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21.582 7.64s-.195-1.373-.795-1.984c-.763-.79-1.613-.794-2.008-.847-2.79-.203-6.984-.203-6.984-.203s-4.193 0-6.983.203c-.395.053-1.245.057-2.008.847-.6.61-.795 1.984-.795 1.984S2 9.245 2 12s0 4.36.01 4.36s.195 1.373.795 1.984c.763.79 1.76.773 2.213.855 1.6.15 6.78.202 6.78.202s4.193 0 6.983-.202c.395-.053 1.245-.057 2.008-.847.6-.61.795-1.984.795-1.984S22 14.755 22 12s-.418-4.36-.418-4.36zm-11.57 6.444V9.916l4.22 2.04-4.22 2.128z"></path></svg></a>
+            </div>
+            <p>&copy; <span id="year"></span> The Drake Fan Hub. All Rights Reserved.</p>
+            <p class="text-sm text-neutral-500 mt-2">This is an unofficial fan site. Not affiliated with Drake or OVO Sound.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Set current year in footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Mobile menu toggle
+        const menuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+
+</body>
+</html>
